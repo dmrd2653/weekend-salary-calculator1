@@ -1,15 +1,30 @@
+let currentForm = 0;
+
+function deleteRow(event) {
+    let row = event.target.parentElement.parentElement;
+    row.remove();
+}
+
 function submitForm(event) {
     console.log('submitForm');
     event.preventDefault();
 
     let firstName = document.querySelector('#first-name').value;
-    console.log(firstName);
     let lastName = document.querySelector('#last-name').value;
-    console.log(lastName);
-    let id = document.querySelector('#id').number(id);
-    console.log(id);
+    let id = document.querySelector('#ID').value;
     let title = document.querySelector('#job-title').value;
-    console.log(title);
     let annualSalary = document.querySelector('#salary').value;
-    console.log(annualSalary);
+    let salaryTable = document.querySelector('#salary-list');
+    salaryTable.innerHTML += `
+        <tr>
+            <td>${firstName}</td>
+            <td>${lastName}</td>
+            <td>${id}</td>
+            <td>${title}</td>
+            <td>${annualSalary}</td>
+            <td><button onclick="deleteRow(event)">Delete</button></td>
+        </tr>
+    `;
+    
+    currentForm += 1;
 }

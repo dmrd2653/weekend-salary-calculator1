@@ -11,21 +11,22 @@
     <header>
         <h1>Salary Calculator</h1>
     </header>
-    <div id="fillform">
-        <form class="salary-form" onsubmit="submitForm(event)">
+    <div id="new-form">
+        <h2>Add Employee</h2>
+        <form class="salary-form" onSubmit="submitForm(event)">
         First Name:
         <input id="first-name" type="string"/>
         Last Name:
         <input id="last-name" type="string"/>
         ID:
-        <input id="ID" type="number"/>
+        <input id="ID" type="string"/>
         Title:
         <input id="job-title" type="string"/>
         Annual Salary:
         <input id="salary" type="string"/>
         <input type="submit" value="Submit"/>
         </form>
-        <table>
+        <table id="employee-list">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -34,8 +35,14 @@
                     <th>Title</th>
                     <th>Annual Salary</th>
                 </tr>
+            </thead>
+            <tbody id="salary-list">
+                <tr>
+
+                </tr>
+            </tbody>
         </table>
     </div>
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

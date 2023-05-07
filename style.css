@@ -1,3 +1,21 @@
+
 div {
-    display: block;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+header {
+    text-align: center;
+}
+form.salary-form {
+    border: 5px;
+    padding: 5px;
+}
+table, td, tr {
+    align-content: center;
+    border-collapse: collapse;
+    border: 2px solid;
+}
+table {
+    padding: 12px;    
+    width: 75%;
 }
