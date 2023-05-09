@@ -5,7 +5,8 @@ function deleteRow(event) {
 }
  
 function totalMonthy(tableSalary) {
-    let tableSalary = document.getElementById('#salaries').value;
+    let employeeTable = document.getElementById("employee-list");
+    let tableSalary = employeeTable.getElementById("salaries");
     for (let i = 1; i < tableSalary.columns.length; i++) {
             let sumAll = 0;
             if (`${annualSalary}`) {
