@@ -4,10 +4,11 @@ function deleteRow(event) {
     row.remove();
 }
  
-function totalMonthy(tableSalary) {
+function totalMonthy(salaries) {
     let employeeTable = document.getElementById("employee-list");
-    let tableSalary = employeeTable.getElementById("salaries");
-    for (let i = 1; i < tableSalary.columns.length; i++) {
+    let salaryBody = employeeTable.getElementById("salary-list");
+    let tableSalary = salaryBody.getElementById("salaries").value;
+    for (let i = 1; i < tableSalary.length; i++) {
             let sumAll = 0;
             if (`${annualSalary}`) {
                 let sumAll = sumAll + (`${annualSalary}`);
@@ -15,8 +16,9 @@ function totalMonthy(tableSalary) {
             return sumAll;
     
     }
-
+    document.getElementById("salaries-total").innerHTML = `<h3> ${sumAll} </h3>`;
 }
+
 
 function submitForm(event) {
     console.log('submitForm');

@@ -2,9 +2,14 @@
 div {
     width: 100%;
     font-family: Georgia, 'Times New Roman', serif;
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 5px;
+    
 }
 header {
     text-align: center;
+    background-color: lightblue;
 }
 form.salary-form {
     border: 5px;
@@ -14,8 +19,10 @@ table, td, tr {
     align-content: center;
     border-collapse: collapse;
     border: 2px solid;
+    padding: 2px;
 }
 table {
     padding: 12px;    
     width: 75%;
+    background-color: white;
 }
