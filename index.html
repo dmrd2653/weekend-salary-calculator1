@@ -11,20 +11,15 @@
     <header>
         <h1>Salary Calculator</h1>
     </header>
-    <div id="new-form">
+    <div id="employee-form">
         <h2>Add Employee</h2>
-        <form class="salary-form" onSubmit="submitForm(event)">
-        First Name:
-        <input id="first-name" type="string"/>
-        Last Name:
-        <input id="last-name" type="string"/>
-        ID:
-        <input id="ID" type="string"/>
-        Title:
-        <input id="job-title" type="string"/>
-        Annual Salary:
-        <input id="salary" type="string"/>
-        <input type="submit" value="Submit"/>
+        <form onSubmit="submitForm(event)" class="salary-form">
+            <input id="first-name" type="text" placeholder="First Name"/>
+            <input id="last-name" type="text" placeholder="Last Name"/>
+            <input id="ID" type="string" placeholder="ID#"/>
+            <input id="job-title" type="text" placeholder="Title"/>
+            <input id="salary" type="text" placeholder="Annual Salary"/>
+            <input type="submit" value="Submit"/>
         </form>
         <table id="employee-list">
             <thead>
@@ -41,7 +36,12 @@
 
                 </tr>
             </tbody>
-        </table>
+
+        </table>    
+   
+    </div>
+    <div id="salaries-total" onclick="totalMonthy(tableSalary)">
+        <h2>Total Monthly</h2>
     </div>
     <script src="script.js"></script>
 </body>

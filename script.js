@@ -1,8 +1,20 @@
 let currentForm = 0;
-
 function deleteRow(event) {
     let row = event.target.parentElement.parentElement;
     row.remove();
+}
+ 
+function totalMonthy(tableSalary) {
+    let tableSalary = document.getElementById('#salaries').value;
+    for (let i = 1; i < tableSalary.columns.length; i++) {
+            let sumAll = 0;
+            if (`${annualSalary}`) {
+                let sumAll = sumAll + (`${annualSalary}`);
+            }
+            return sumAll;
+    
+    }
+
 }
 
 function submitForm(event) {
@@ -21,7 +33,7 @@ function submitForm(event) {
             <td>${lastName}</td>
             <td>${id}</td>
             <td>${title}</td>
-            <td>${annualSalary}</td>
+            <td id="salaries">${annualSalary}</td>
             <td><button onclick="deleteRow(event)">Delete</button></td>
         </tr>
     `;
