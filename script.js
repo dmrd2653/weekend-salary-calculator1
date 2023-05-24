@@ -20,21 +20,30 @@ function submitForm(event) {
             <td id="salaries">${annualSalary}</td>
             <td><button onclick="deleteRow(event)">Delete</button></td>
         </tr>
-    `
-    ;
+    `;
+
     //  clear the form
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
     document.querySelector('#ID').value = '';
     document.querySelector('#job-title').value = '';
     document.querySelector('#salary').value = '';
-    totalMonthy(annualSalary)
-    currentForm += 1;
+    
+    currentForm += 1
+    totalMonthy(annualSalary);
 }
+
+let sumAll = 0;
 
 function totalMonthy(salaries) {
     sumAll = sumAll + Number(salaries);
-    document.getElementById("salaries-total").innerHTML = `<h3> ${sumAll/12} </h3>`;
+    document.getElementById("salaries-total").innerHTML = `
+    <h2>Total Monthly Salaries </h2>
+    <h3> ${sumAll/12} </h3>
+    `;
+    if ((sumAll/12) >= 20000.00) {
+        document.getElementById("salaries-total").style.backgroundColor = "red";
+    };
 }
 
 function deleteRow(event) {
