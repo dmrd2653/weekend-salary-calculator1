@@ -1,25 +1,6 @@
 let currentForm = 0;
-function deleteRow(event) {
-    let row = event.target.parentElement.parentElement;
-    row.remove();
-}
- 
-function totalMonthy(salaries) {
-    let employeeTable = document.getElementById("employee-list");
-    let salaryBody = employeeTable.getElementById("salary-list");
-    let tableSalary = salaryBody.getElementById("salaries").value;
-    for (let i = 1; i < tableSalary.length; i++) {
-            let sumAll = 0;
-            if (`${annualSalary}`) {
-                let sumAll = sumAll + (`${annualSalary}`);
-            }
-            return sumAll;
-    
-    }
-    document.getElementById("salaries-total").innerHTML = `<h3> ${sumAll} </h3>`;
-}
 
-
+// function to submit form with inputs and add to salary table
 function submitForm(event) {
     console.log('submitForm');
     event.preventDefault();
@@ -39,7 +20,24 @@ function submitForm(event) {
             <td id="salaries">${annualSalary}</td>
             <td><button onclick="deleteRow(event)">Delete</button></td>
         </tr>
-    `;
-    
+    `
+    ;
+    //  clear the form
+    document.querySelector('#first-name').value = '';
+    document.querySelector('#last-name').value = '';
+    document.querySelector('#ID').value = '';
+    document.querySelector('#job-title').value = '';
+    document.querySelector('#salary').value = '';
+    totalMonthy(annualSalary)
     currentForm += 1;
+}
+
+function totalMonthy(salaries) {
+    sumAll = sumAll + Number(salaries);
+    document.getElementById("salaries-total").innerHTML = `<h3> ${sumAll/12} </h3>`;
+}
+
+function deleteRow(event) {
+    let row = event.target.parentElement.parentElement;
+    row.remove();
 }
